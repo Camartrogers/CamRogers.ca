@@ -1,0 +1,125 @@
+.typewriter {
+  max-width: 50ch;
+  margin: 1rem auto;
+  overflow-x: hidden;
+  height: 18rem;
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
+}
+@keyframes letters {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50ch;
+  }
+}
+@keyframes lines {
+  from {
+    top: -1%;
+  }
+  to {
+    top: 105%;
+  }
+}
+.type {
+  position: relative;
+  word-break: break-all;
+  overflow: hidden;
+  width: 50ch;
+}
+@supports (width: 1ch) {
+  .type:before,
+  .type:after {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    display: block;
+    height: 2em;
+    width: 100%;
+    background-color: #191919;
+  }
+  .type:before {
+    border-left: 2px solid transparent;
+    top: 100%;
+    animation-name: letters, lines;
+    animation-fill-mode: both;
+  }
+  .type:after {
+    content: "";
+    height: 100%;
+    top: 100%;
+    left: 0;
+    margin-top: 1.2em;
+  }
+}
+//First line
+.type:before {
+  animation-duration: 3s;
+  animation-timing-function: steps(50, end), step-end;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+}
+.type:after {
+  animation: lines 1.4285714286s steps(1, end);
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+//Second line
+.type + .type:before {
+  animation-duration: 2s;
+  animation-timing-function: steps(50, end), step-end;
+  animation-iteration-count: 1;
+  animation-delay: 3.2s;
+}
+.type + .type:after {
+  animation: lines 10s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+// Third line
+.type + .type + .type:before {
+  animation-duration: 2s;
+  animation-timing-function: steps(50, end), step-end;
+  animation-iteration-count: 1;
+  animation-delay: 6s;
+}
+.type + .type + .type:after {
+  animation: lines 4.2857142857s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+//Fourth line
+.type + .type + .type + .type:before {
+  animation-duration: 2s;
+  animation-timing-function: steps(50, end), step-end;
+  animation-iteration-count: 1;
+  animation-delay: 8.5s;
+}
+.type + .type + .type + .type:after {
+  animation: lines 5s steps(5, end) 1;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+// Continue link
+@keyframes fading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.invisible {
+  opacity: 0;
+  -webkit-animation: fading ease-in 1s;
+  animation: fading ease-in 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-delay: 9.75s;
+}
