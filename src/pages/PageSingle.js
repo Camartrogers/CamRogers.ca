@@ -44,7 +44,7 @@ function PageSingle() {
           >
             <section className="single-desc">
               <div>
-                <h2>
+                <h2 className="single-header">
                   <span className="tag">&lt;h2&gt;</span>
                   {restData.title.rendered}
                   <span className="tag">&lt;/h2&gt;</span>
@@ -85,17 +85,19 @@ function PageSingle() {
             ) : (
               <Loading />
             )}
-            <h3>
-              <span className="tag">&lt;h3&gt;</span>Skills
-              <span className="tag">&lt;/h3&gt;</span>
-            </h3>
-            <p>
-              <span className="tag">&lt;p&gt;</span>
-              {restData.acf.skills}
-              <span className="tag">&lt;/p&gt;</span>
-            </p>
-            <article>
-              <h3>
+            <section>
+              <h3 className="single-header">
+                <span className="tag">&lt;h3&gt;</span>Skills
+                <span className="tag">&lt;/h3&gt;</span>
+              </h3>
+              <p>
+                <span className="tag">&lt;p&gt;</span>
+                {restData.acf.skills}
+                <span className="tag">&lt;/p&gt;</span>
+              </p>{" "}
+            </section>
+            <section>
+              <h3 className="single-header">
                 <span className="tag">&lt;h3&gt;</span>What I Learned
                 <span className="tag">&lt;/h3&gt;</span>
               </h3>
@@ -104,7 +106,7 @@ function PageSingle() {
                 {restData.acf.learned}
                 <span className="tag">&lt;/p&gt;</span>
               </p>
-            </article>
+            </section>
             <Contact />
           </motion.div>
         </AnimatePresence>

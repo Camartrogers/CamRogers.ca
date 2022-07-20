@@ -19,7 +19,7 @@ a {
 main {
   padding: 20rem 1rem 0 1rem;
   @media (min-width: 28rem) {
-    padding: 12rem 1rem 0 1rem;
+    padding: 8rem 1rem 0 1rem;
   }
 }
 .tag {
@@ -28,7 +28,7 @@ main {
   margin: 0;
   padding: 0;
   font-weight: 400;
-  color: rgb(113, 187, 240);
+  color: #48b9f5;
 }
 .btn {
   padding: 0.5rem;
@@ -38,7 +38,15 @@ main {
   &:hover,
   &:focus,
   &:active {
-    color: rgb(113, 187, 240);
-    border: 2px solid rgb(113, 187, 240);
+    color: #48b9f5;
+    border: 2px solid #48b9f5;
   }
+}
+h2 {
+  margin-top: 5rem;
+}
+#about,
+#projects,
+section {
+  border-bottom: 1px solid #4e4e4e;
 }

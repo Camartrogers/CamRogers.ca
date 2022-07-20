@@ -1,4 +1,7 @@
     Options -MultiViews
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !/game-project
+    RewriteCond %{REQUEST_URI} !/rocky-mountain-fest
+    RewriteCond %{REQUEST_URI} !/moviepedia
     RewriteRule ^ index.html [QSA,L]

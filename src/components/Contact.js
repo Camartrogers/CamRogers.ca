@@ -12,9 +12,13 @@ function Contact() {
       <p>
         <span className="tag">&lt;p&gt;</span>
         If you have enjoyed reading about and reviewing my work and you would
-        like to contact me, then please reach out to me by email at:
-        camartrogers@gmail
+        like to contact me, then please reach out to me by email:
         <span className="tag">&lt;/p&gt;</span>
+        <p>
+          <span className="tag">&lt;p&gt;</span>
+          camartrogers@gmail
+          <span className="tag">&lt;/p&gt;</span>
+        </p>
         <button
           className="btn"
           onClick={() => {
