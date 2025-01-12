@@ -58,13 +58,19 @@ function PageSingle() {
               </div>
 
               <div className="link-wrapper">
-                <a
-                  className="github-link btn"
-                  href={restData.acf.github_link}
-                  target="_blank"
-                >
-                  GitHub
-                </a>
+                {restData.acf.github_link ? (
+                  <a
+                    className="github-link btn"
+                    href={restData.acf.github_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                ) : (
+                  <span className="github-link btn">No repo available</span>
+                )}
+
                 <a
                   className="live-site btn"
                   href={restData.acf.live_site}
